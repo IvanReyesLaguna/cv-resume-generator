@@ -1,0 +1,29 @@
+# Archivos personales
+foto-perfil.png
+foto-perfil.jpg
+foto-perfil.jpeg
+
+# Archivos de imagen personal (por si cambias el nombre)
+foto*
+profile*
+perfil*
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Archivos PDF generados (opcional)
+*_CV.pdf
+Ivan_Reyes_Laguna_CV.pdf
