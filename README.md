@@ -1,113 +1,60 @@
-# CV Resume Generator - Iván Reyes Laguna
+# Professional Resume - Iván Reyes Laguna
 
-Un CV profesional y moderno diseñado específicamente para roles de Data Analyst, creado con HTML/CSS responsive y optimizado para impresión.
+A modern, responsive HTML/CSS resume template optimized for Business Analyst and Data Analyst roles. Available in both Spanish and English versions.
 
-## 🎯 Características
+## Features
 
-- **Diseño Profesional**: Layout limpio y moderno enfocado en Data Analytics
-- **Responsive**: Se adapta perfectamente a diferentes tamaños de pantalla
-- **Print-Ready**: Optimizado para impresión en formato A4
-- **Estructura Organizada**: Información bien estructurada con jerarquía visual clara
-- **Colores Profesionales**: Paleta de azules que transmite confianza y profesionalismo
+- **Professional Design**: Clean two-column layout with sidebar navigation
+- **Print-Ready**: A4 format optimization with zero margins
+- **Responsive**: Mobile-friendly design that adapts to all screen sizes
+- **Self-Contained**: Single HTML file with embedded CSS and JavaScript
+- **Interactive**: Print functionality with keyboard shortcut (Ctrl+P)
 
-## 📋 Contenido Destacado
+## Quick Start
 
-### Perfil Profesional
-- **Data Analyst** especializado en telecomunicaciones y finanzas
-- **2+ años de experiencia** en Avatel Telecom
-- **Expertise técnico**: Python, SQL, Tableau, ETL Pipelines
-- **Enfoque en automatización** y AI-assisted workflows
+1. Choose your preferred language version:
+   - `index_spanish.html` - Spanish version
+   - `index_english.html` - English version (US market optimized)
+2. Open the selected file in any modern web browser
+3. Use `Ctrl+P` (Windows) or `Cmd+P` (Mac) to print or save as PDF
+4. No server or dependencies required
 
-### Experiencia Clave
-- Desarrollo de dashboards interactivos en Tableau
-- Automatización de procesos ETL con Python
-- Análisis de datos complejos y modelado predictivo
-- Implementación de sistemas de alertas y monitoreo
-
-### Educación
-- **Master's in Business Analytics** - Universidad Europea
-- **Grado en Ciencias Económicas** - Universidad de Málaga
-
-## 🚀 Cómo usar
-
-### Opción 1: Ver en navegador
-1. Abre `index.html` en tu navegador web
-2. El CV se mostrará con formato profesional
-3. Para imprimir: `Ctrl+P` (Windows) o `Cmd+P` (Mac)
-
-### Opción 2: Generar PDF automáticamente
-```bash
-# Instalar dependencias
-pip install weasyprint
-
-# Ejecutar generador de PDF
-python generate_pdf.py
-```
-
-## 📁 Estructura de archivos
+## File Structure
 
 ```
 cv-resume-generator/
-├── index.html              # CV principal en HTML
-├── generate_pdf.py          # Script para generar PDF
-├── README.md               # Esta documentación
-└── Data Resume.pdf         # Información original (fuente)
+├── index_spanish.html  # Spanish resume version
+├── index_english.html  # English resume version (US optimized)
+├── foto-perfil.png     # Profile image
+└── README.md          # Documentation
 ```
 
-## 🎨 Características de Diseño
+## Technical Stack
 
-### Layout
-- **Grid Layout**: Sidebar + contenido principal
-- **Tipografía**: Inter (Google Fonts) para máxima legibilidad
-- **Iconos**: Font Awesome para elementos visuales
+- **HTML5**: Semantic structure
+- **CSS3**: Flexbox layout with responsive design
+- **JavaScript**: Print functionality
+- **Google Fonts**: Inter typography
+- **Font Awesome**: Professional icons
 
-### Colores
-- **Primario**: Azul profesional (#1e40af, #3b82f6)
-- **Secundario**: Grises neutros para texto
-- **Acentos**: Azul para enlaces y elementos destacados
+## Design Specifications
 
-### Responsive
-- **Desktop**: Layout de 2 columnas
-- **Mobile**: Layout apilado para pantallas pequeñas
-- **Print**: Optimizado para A4 sin márgenes
+- **Layout**: 240px sidebar + flexible main content
+- **Colors**: Professional blue palette (#1e40af, #3b82f6)
+- **Typography**: Inter font family for optimal readability
+- **Print**: A4 dimensions (210mm × 297mm)
 
-## 💼 Puntos Fuertes del CV
+## Feedback & Collaboration
 
-1. **Experiencia Técnica Sólida**
-   - Python, SQL, Tableau
-   - ETL Pipelines y automatización
-   - Dashboards interactivos
+I'm sharing this resume design and I'm open to hearing suggestions for improvements on:
 
-2. **Impacto Medible**
-   - Reducción de tiempos de detección de anomalías
-   - Automatización de procesos manuales
-   - Mejora de eficiencia operacional
+- **Experience presentation**: How to better highlight achievements and impact
+- **Skills organization**: Optimal categorization and prioritization
+- **Structure optimization**: Layout and content flow improvements
+- **Design enhancements**: Visual elements and user experience
 
-3. **Versatilidad Profesional**
-   - Background en economía
-   - Experiencia empresarial propia
-   - Enfoque en AI y nuevas tecnologías
-
-4. **Certificaciones Relevantes**
-   - Excel Avanzado
-   - Business Analytics
-   - Participación en Datatones
-
-## 📧 Información de Contacto
-
-- **Email**: ivan.reyes.laguna22@gmail.com
-- **LinkedIn**: [linkedin.com/in/ivanreyeslaguna](https://www.linkedin.com/in/ivanreyeslaguna)
-- **GitHub**: [github.com/IvanReyesLaguna](https://github.com/IvanReyesLaguna/Business-Analytics)
-- **Teléfono**: 610 670 554
-- **Ubicación**: Alcobendas, Madrid, España
-
-## ✨ Próximos pasos
-
-1. **Revisar el contenido** - Verificar que toda la información sea correcta
-2. **Personalizar si es necesario** - Ajustar colores o layout según preferencias
-3. **Generar PDF** - Usar el script o imprimir desde navegador
-4. **Distribuir** - Enviar a empleadores y actualizar perfiles online
+Feel free to reach out with your insights and recommendations!
 
 ---
 
-**¡Tu CV profesional está listo para impulsar tu carrera en Data Analytics!** 🚀
+**Ready to advance your career in Business Analytics** 🚀
