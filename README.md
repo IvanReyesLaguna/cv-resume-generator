@@ -14,7 +14,7 @@ A modern, responsive HTML/CSS resume template optimized for Business Analyst and
 
 1. Choose your preferred language version:
    - `index_spanish.html` - Spanish version
-   - `index_english.html` - English version (US market optimized)
+   - `index_english.html` - English version
 2. Open the selected file in any modern web browser
 3. Use `Ctrl+P` (Windows) or `Cmd+P` (Mac) to print or save as PDF
 4. No server or dependencies required
