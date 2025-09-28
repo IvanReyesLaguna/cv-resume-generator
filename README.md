@@ -1,6 +1,6 @@
 # Professional Resume - Iván Reyes Laguna
 
-A modern, responsive HTML/CSS resume template optimized for Business Analyst and Data Analyst roles.
+A modern, responsive HTML/CSS resume template optimized for Business Analyst and Data Analyst roles. Available in both Spanish and English versions.
 
 ## Features
 
@@ -12,15 +12,19 @@ A modern, responsive HTML/CSS resume template optimized for Business Analyst and
 
 ## Quick Start
 
-1. Open `index.html` in any modern web browser
-2. Use `Ctrl+P` (Windows) or `Cmd+P` (Mac) to print or save as PDF
-3. No server or dependencies required
+1. Choose your preferred language version:
+   - `index_spanish.html` - Spanish version
+   - `index_english.html` - English version (US market optimized)
+2. Open the selected file in any modern web browser
+3. Use `Ctrl+P` (Windows) or `Cmd+P` (Mac) to print or save as PDF
+4. No server or dependencies required
 
 ## File Structure
 
 ```
 cv-resume-generator/
-├── index.html          # Main resume file
+├── index_spanish.html  # Spanish resume version
+├── index_english.html  # English resume version (US optimized)
 ├── foto-perfil.png     # Profile image
 └── README.md          # Documentation
 ```
