@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Reyes Laguna - Business Analyst Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+
+        .cv-container {
+            max-width: 210mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: flex;
+            min-height: 297mm;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px 20px;
+            width: 240px;
+            flex-shrink: 0;
+            min-width: 240px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background-image: url('foto-perfil.png');
+            background-size: 120%;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            border: 3px solid rgba(255,255,255,0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .title {
+            font-size: 12px;
+            opacity: 0.9;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .sidebar-section {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-section h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 6px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 11px;
+        }
+
+        .contact-item i {
+            width: 18px;
+            margin-right: 10px;
+            opacity: 0.8;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+        }
+        
+        .skills-grid li {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .languages-item, .cert-item {
+            margin-bottom: 8px;
+            font-size: 11px;
+        }
+
+        .languages-item strong, .cert-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .cert-item {
+            background: rgba(255,255,255,0.05);
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 30px 25px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .summary {
+            margin-bottom: 25px;
+        }
+
+        .summary h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .summary h2 i {
+            margin-right: 10px;
+        }
+
+        .summary p {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h2 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        .section h2 i {
+            margin-right: 10px;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .education-item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: #3b82f6;
+            border-radius: 50%;
+        }
+
+        .job-header {
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            color: #1f2937 !important;
+            line-height: 1.3 !important;
+        }
+        
+        .job-dates {
+            font-size: 11px;
+            font-weight: 400;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .company {
+            font-size: 13px;
+            font-weight: 500;
+            color: #3b82f6;
+            margin-bottom: 3px;
+        }
+
+        .company .location {
+            font-size: 11px;
+            font-weight: 400;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .date-location {
+            font-size: 11px;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .job-description {
+            margin-top: 8px;
+        }
+
+        .job-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job-description li {
+            margin-bottom: 6px;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #4b5563;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .job-description li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        .education-item h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 2px;
+        }
+        
+        .education-item h4 .institution {
+            font-weight: 500;
+            color: #3b82f6;
+        }
+
+        .education-item .institution {
+            font-size: 12px;
+            color: #3b82f6;
+            font-weight: 500;
+            margin-bottom: 1px;
+        }
+
+        .education-item .field {
+            font-size: 11px;
+            color: #6b7280;
+            margin-bottom: 2px;
+        }
+
+        .awards-list {
+            list-style: none;
+        }
+
+        .awards-list li {
+            background: #f8fafc;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: none !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                min-height: auto;
+                display: flex !important;
+                flex-direction: row !important;
+                page-break-inside: avoid;
+            }
+            .sidebar {
+                width: 240px !important;
+                min-width: 240px !important;
+                max-width: 240px !important;
+                flex-shrink: 0 !important;
+                flex-grow: 0 !important;
+                padding: 25px 18px !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            .main-content {
+                flex: 1 !important;
+                width: calc(210mm - 240px) !important;
+                padding: 25px 20px !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                min-width: 0 !important;
+            }
+            .experience-item,
+            .education-item,
+            .summary {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            html, body {
+                width: 210mm !important;
+                height: 297mm !important;
+                overflow: hidden !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                margin: 10px;
+            }
+            .sidebar {
+                width: auto;
+                padding: 30px 20px;
+            }
+            .main-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image"></div>
+                <h1 class="name">Ivan Reyes Laguna</h1>
+                <p class="title">Business Analyst | Economist</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-address-book"></i> Contact</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+34 610 670 554</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:ivan.reyes.laguna22@gmail.com">ivan.reyes.laguna22@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/ivanreyeslaguna" target="_blank">linkedin.com/in/ivanreyeslaguna</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/IvanReyesLaguna/Business-Analytics" target="_blank">github.com/IvanReyesLaguna</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Alcobendas, Madrid, Spain</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-cogs"></i> Technical Skills</h3>
+                <ul class="skills-list skills-grid">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>ETL</li>
+                    <li>Git</li>
+                    <li>Data<br>Modeling</li>
+                    <li>Power BI<br>Tableau</li>
+                    <li>Financial<br>Forecasting</li>
+                    <li>Data<br>Storytelling</li>
+                    <li>Machine<br>Learning</li>
+                    <li>Cross-Functional<br>Collaboration</li>
+                    <li>AI Tools</li>
+                    <li>Problem-Solving</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-language"></i> Languages</h3>
+                <div class="languages-item">
+                    <strong>Spanish</strong>
+                    <span>Native</span>
+                </div>
+                <div class="languages-item">
+                    <strong>English</strong>
+                    <span>Professional (B2)</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fas fa-trophy"></i> Key Achievements</h3>
+                <div class="cert-item">
+                    <strong>Summa Cum Laude - Master's Thesis</strong>
+                    <span>Web App for Risk Detection in Images</span>
+                </div>
+                <div class="cert-item">
+                    <strong>Datathon 2024 & 2025 — By Datafest</strong>
+                    <span>Participant and Certified Finalist</span>
+                    <span style="display: block; font-size: 10px; color: rgba(255,255,255,0.8); margin-top: 4px;">
+                        Team competition in data analysis and visualization applied to real-world cases.
+                    </span>
+                </div>
+                <div class="cert-item">
+                    <strong>Santalucía Talent Scholarship Program</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="summary">
+                <h2><i class="fas fa-user-circle"></i> Professional Summary</h2>
+                <p>
+                    Business Analyst with 2+ years of experience in telecommunications and finance, specializing in transforming data into actionable insights. Proficient in Python, SQL, and Tableau for ETL automation and self-service dashboards. Combines technical capabilities with business acumen to drive key KPIs, while expanding expertise in financial forecasting, applied machine learning, and data storytelling for stakeholders.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Data Finance Analyst  —  <span class="job-dates">Jul 2023 - Present (2 years 3 months)</span></div>
+                            <div class="company">Avatel Telecom - <span class="location">Madrid, Spain</span></div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <p style="font-size: 11px; color: #6b7280; margin-bottom: 6px; font-style: italic;">
+                            <strong>Career Progression:</strong> B2B Technical Analyst Trainee (Jul 2023 - Jan 2024)
+                        </p>
+                        <ul>
+                            <li><strong>Process Automation:</strong> Developed Python ETL solutions and Tableau reports that eliminated manual workflows, reducing operational errors and freeing 20+ weekly hours for higher-value analysis.</li>
+                            <li><strong>Departmental Analytics Repository:</strong> Implemented a data mart providing end-to-end visibility into invoice lifecycle, enabling KPI measurement and data-driven decision making. Contributed to a 0.25% improvement in payment default rate.</li>
+                            <li><strong>Automated Reconciliation:</strong> Automated billing reconciliation and reporting processes with external portfolio manager, ensuring total transparency in supplier management and enabling evaluation of collection process effectiveness.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Business Development  —  <span class="job-dates">Oct 2021 - Sep 2022 (1 year)</span></div>
+                            <div class="company">Marbella Segway Tours & Bikes</div>
+                            <div class="company"><span class="location">Puerto Banús, Marbella</span></div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li><strong>Pricing Optimization:</strong> Adjusted rates to inflation and luxury tourism demand, increasing profitability.</li>
+                            <li><strong>Service Diversification:</strong> Repositioned offerings with trending electric vehicles, increasing sales by 20% despite decline in main segway service.</li>
+                            <li><strong>Marketing Strategy:</strong> Developed market-oriented plan that enhanced visibility and brand recognition, prioritizing digital channel with web redesign, online sales, and SEM/SEO actions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Entrepreneur  —  <span class="job-dates">May 2020 - Jun 2022 (2 years 2 months)</span></div>
+                            <div class="company">Auto Detailing La Rubia</div>
+                            <div class="company"><span class="location">Alhaurín de la Torre, Málaga</span></div>
+                        </div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li><strong>Microbusiness Management:</strong> Collaborated in management and development of family automotive detailing business.</li>
+                            <li><strong>Business Analysis:</strong> Conducted sales, cost, and profitability analysis to propose improvements in service offerings and work systems, aimed at increasing competitiveness and business model efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                
+                <div class="education-item">
+                    <h4>Master's Degree in Business Analytics - <span class="institution">European University of Madrid</span></h4>
+                    <div class="field">Business Analytics and IT Services - Sep 2022 - Jun 2023</div>
+                </div>
+
+                <div class="education-item">
+                    <h4>Bachelor's Degree in Economics - <span class="institution">University of Málaga</span></h4>
+                    <div class="field">Economics - 2013 - 2019</div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Add print functionality
+        function printCV() {
+            window.print();
+        }
+        
+        // Add keyboard shortcut for printing
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                printCV();
+            }
+        });
+    </script>
+</body>
+</html>
