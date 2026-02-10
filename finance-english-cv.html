@@ -1,0 +1,509 @@
+<!-- =========================
+     CV — BUSINESS ANALYST (EN) — STYLE VERSION (Sidebar)
+     File suggestion: cv-finance-cv-en-styled.html
+========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iván Reyes Laguna - Business Analyst Resume</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.56; /* slightly higher for A4 and readability */
+      color: #333;
+      background: #f8fafc;
+    }
+
+    .cv-container {
+      max-width: 210mm;
+      margin: 14px auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.10);
+      display: flex;
+      min-height: 297mm;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      color: white;
+      padding: 28px 18px; /* more vertical breathing room */
+      width: 240px;
+      flex-shrink: 0;
+      min-width: 240px;
+    }
+
+    .profile-section {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .profile-image {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      background-image: url('foto-perfil.png'); /* <-- replace with your photo */
+      background-size: 120%;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      border: 3px solid rgba(255,255,255,0.28);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .name {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.12;
+    }
+
+    .title {
+      font-size: 11.4px;
+      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.24;
+    }
+
+    /* spacing between sidebar sections */
+    .sidebar-section { margin-bottom: 18px; }
+
+    .sidebar-section h3 {
+      font-size: 12.1px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+      padding-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 9px;
+      gap: 10px;
+      font-size: 10.8px;
+    }
+
+    .contact-item i { width: 18px; opacity: 0.85; }
+
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .skills-list { list-style: none; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .skills-grid li {
+      background: rgba(255,255,255,0.12);
+      padding: 6px 9px;
+      border-radius: 10px;
+      font-size: 10.1px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.16;
+    }
+
+    .languages-item {
+      margin-bottom: 10px;
+      font-size: 10.8px;
+    }
+
+    .languages-item strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .highlight-item{
+      background: rgba(255,255,255,0.07);
+      padding: 9px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 10.6px;
+      line-height: 1.24;
+    }
+    .highlight-item strong{
+      display:block;
+      font-weight:600;
+      margin-bottom:2px;
+    }
+    .highlight-item span{
+      display:block;
+      opacity:0.9;
+      font-size:10.2px;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 28px 22px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .summary { margin-bottom: 18px; }
+
+    .summary h2, .section h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+      gap: 10px;
+    }
+
+    .summary p {
+      font-size: 11.6px;
+      line-height: 1.50;
+      color: #4b5563;
+      text-align: justify;
+    }
+
+    .section { margin-bottom: 16px; }
+
+    .experience-item, .education-item {
+      margin-bottom: 16px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .experience-item::before, .education-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      background: #3b82f6;
+      border-radius: 50%;
+    }
+
+    .job-header { margin-bottom: 10px; }
+
+    .job-title {
+      font-size: 13.0px;
+      font-weight: 600;
+      color: #1f2937;
+      line-height: 1.24;
+    }
+
+    .job-dates {
+      font-size: 10.8px;
+      font-weight: 400;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .company {
+      font-size: 12.2px;
+      font-weight: 500;
+      color: #3b82f6;
+      margin-bottom: 3px;
+    }
+
+    .company .location {
+      font-size: 10.8px;
+      font-weight: 400;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .note-inline {
+      margin-top: 6px;
+      font-size: 10.6px;
+      color: #6b7280;
+      font-style: italic;
+      line-height: 1.34;
+    }
+
+    .job-description { margin-top: 10px; }
+
+    .job-description ul { list-style: none; padding-left: 0; }
+
+    .job-description li {
+      margin-bottom: 7px;
+      font-size: 11.5px;
+      line-height: 1.44;
+      color: #4b5563;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .job-description li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: bold;
+    }
+
+    .education-item h4 {
+      font-size: 12.6px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 3px;
+    }
+
+    .education-item h4 .institution {
+      font-weight: 500;
+      color: #3b82f6;
+    }
+
+    .education-item .field {
+      font-size: 10.8px;
+      color: #6b7280;
+      margin-bottom: 2px;
+    }
+
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { background: white; margin: 0; padding: 0; }
+      .cv-container {
+        box-shadow: none;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: none !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        min-height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        page-break-inside: avoid;
+      }
+      .sidebar {
+        width: 240px !important;
+        min-width: 240px !important;
+        max-width: 240px !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        padding: 28px 18px !important; /* same as screen */
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .main-content {
+        flex: 1 !important;
+        width: calc(210mm - 240px) !important;
+        padding: 28px 22px !important; /* same as screen */
+        page-break-inside: avoid;
+        break-inside: avoid;
+        min-width: 0 !important;
+      }
+      .experience-item, .education-item, .summary, .section { page-break-inside: avoid; break-inside: avoid; }
+      @page { size: A4; margin: 0; }
+      html, body { width: 210mm !important; height: 297mm !important; overflow: hidden !important; }
+    }
+
+    @media (max-width: 768px) {
+      .cv-container { flex-direction: column; margin: 10px; }
+      .sidebar { width: auto; padding: 24px 18px; }
+      .main-content { padding: 24px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-section">
+        <div class="profile-image"></div>
+        <h1 class="name">Iván Reyes Laguna</h1>
+        <p class="title">Business Analyst | Economist</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-address-book"></i> Contact</h3>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>(+34) 610 670 554</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ivan.reyes.laguna22@gmail.com">ivan.reyes.laguna22@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/ivanreyeslaguna" target="_blank" rel="noopener">linkedin.com/in/ivanreyeslaguna</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Alcobendas, Madrid</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-bolt"></i> Core Skills</h3>
+        <ul class="skills-list skills-grid">
+          <li>Business<br>Cases</li>
+          <li>Budget &amp;<br>Forecast</li>
+          <li>Actual vs<br>Budget</li>
+          <li>P&amp;L / OPEX<br>Reporting</li>
+          <li>Data Quality<br>&amp; Reconciliation</li>
+          <li>Reporting<br>Automation</li>
+          <li>Executive<br>Reporting</li>
+          <li>Data Viz &amp;<br>Storytelling</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-wrench"></i> Tools</h3>
+        <ul class="skills-list skills-grid">
+          <li>Excel (Advanced)</li>
+          <li>SQL <br>(BigQuery)</li>
+          <li>Tableau /<br>Power BI</li>
+          <li>SAP (FI/CO) /<br>Dynamics NAV</li>
+          <li>Python</li>
+          <li>Git</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-trophy"></i> Highlights</h3>
+        <div class="highlight-item">
+          <strong>Honors Distinction — Master’s Thesis</strong>
+          <span>Web app: image-based risk detection</span>
+        </div>
+        <div class="highlight-item">
+          <strong>Datathon 2024 &amp; 2025 (Datafest)</strong>
+          <span>Participant &amp; certified finalist</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <div class="languages-item">
+          <strong>Spanish</strong>
+          <span>Native</span>
+        </div>
+        <div class="languages-item">
+          <strong>English</strong>
+          <span>Professional (B2)</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="summary">
+        <h2><i class="fas fa-user-circle"></i> Professional Summary</h2>
+        <p>
+          Business Analyst with 2+ years of experience across telecommunications and finance.
+          Track record in executive reporting, KPI monitoring, and structured analysis to support decision-making. Known for attention to detail, fast ramp-up,
+          and clear communication with cross-functional stakeholders.
+          Interested in a demanding environment where I can keep developing,
+          learn from high-caliber teams, and take on progressively challenging responsibilities.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div class="job-title">FP&amp;A Business Analyst — <span class="job-dates">Freepik | Nov 2025 – Jan 2026</span></div>
+            <div class="company">Freepik — <span class="location">Málaga, Spain</span></div>
+          </div>
+
+          <div class="job-description">
+            <ul>
+              <li><strong>KPI tracking (growth):</strong> Tracked key KPIs such as Revenue, ARR, ARPU, Net Adds, and Churn for recurring reporting to the Executive Committee.</li>
+              <li><strong>Margin and cost tracking:</strong> Supported Gross Margin monitoring and cost control (OPEX / key drivers), helping explain results and business levers.</li>
+              <li><strong>Variance analysis &amp; data quality:</strong> Built Actual vs Budget/Forecast views; queried and validated data in SQL and consolidated sources to ensure reporting consistency.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div class="job-title">Data Finance Analyst — <span class="job-dates">Avatel Telecom | Jul 2023 – Oct 2025</span></div>
+            <div class="company">Avatel Telecom — <span class="location">Madrid, Spain</span></div>
+            <div class="note-inline">
+              <strong>Promotions:</strong>
+              B2B Technical Analyst Trainee (Jul 2023 – Jan 2024); Data Analyst (Jan 2024 – Sep 2025); FP&amp;A Business Analyst (Sep 2025 – Oct 2025)
+            </div>
+          </div>
+
+          <div class="job-description">
+            <ul>
+              <li><strong>ETL &amp; reporting automation:</strong> Built Python pipelines and Tableau reporting to remove manual workflows, reduce operational errors, and free up 20+ hours/week for higher-value analysis.</li>
+              <li><strong>Data modeling (data mart / KPI layer):</strong> Designed and maintained a departmental data mart and KPI layer to standardize definitions and enable end-to-end invoicing lifecycle reporting; contribution to a 0.25% improvement in the delinquency rate.</li>
+              <li><strong>Automated reconciliation:</strong> Automated invoice reconciliation and reporting with an external collections partner to increase transparency and assess process effectiveness.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div class="job-title">Business Development — <span class="job-dates">Marbella Segway Tours &amp; Bikes | Oct 2021 – Sep 2022</span></div>
+            <div class="company">Marbella, Spain</div>
+          </div>
+
+          <div class="job-description">
+            <ul>
+              <li><strong>Service diversification:</strong> Repositioned the offering toward trending electric vehicles, increasing sales by 20% vs. the decline of the core segway service.</li>
+              <li><strong>Marketing plan:</strong> Boosted the digital channel (website, online sales, and SEM/SEO initiatives) to increase visibility and acquisition.</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="section">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+
+        <div class="education-item">
+          <h4>Master’s in Business Analytics — <span class="institution">Universidad Europea de Madrid</span></h4>
+          <div class="field">Specialization: Data Science and IT Services | Sep 2022 – Jun 2023</div>
+        </div>
+
+        <div class="education-item">
+          <h4>Degree in Economics — <span class="institution">University of Málaga (Spain)</span></h4>
+          <div class="field">Specialization: Taxation (Public Finance) | 2013 – 2019</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><i class="fas fa-certificate"></i> Certifications</h2>
+        <div class="job-description">
+          <ul>
+            <li><strong>Tableau Specialist Certificate</strong> — OpenWebinars (Aug 2025)</li>
+            <li><strong>SQL Certificate (IBM)</strong> — Datahack School (Jul 2024)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function printCV() { window.print(); }
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key.toLowerCase() === 'p') {
+        e.preventDefault();
+        printCV();
+      }
+    });
+  </script>
+</body>
+</html>

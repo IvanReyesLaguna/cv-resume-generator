@@ -1,0 +1,473 @@
+<!-- =========================
+     CV — DATA ANALYST (Experienced)
+     File suggestion: cv-data-analyst.html
+========================= -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iván Reyes Laguna - Finance Data Analyst CV</title>
+
+  <!-- Optional online resources (safe fallbacks included in CSS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8fafc;
+    }
+
+    .cv-container {
+      max-width: 210mm;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: flex;
+      min-height: 297mm;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      color: white;
+      padding: 30px 20px;
+      width: 240px;
+      flex-shrink: 0;
+      min-width: 240px;
+    }
+
+    .profile-section { text-align: center; margin-bottom: 30px; }
+
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: block;
+      object-fit: cover;
+      object-position: 50% 30%;
+      border: 3px solid rgba(255,255,255,0.3);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .name { font-size: 20px; font-weight: 700; margin-bottom: 6px; line-height: 1.2; }
+    .title { font-size: 12px; opacity: 0.9; font-weight: 400; line-height: 1.3; }
+
+    .sidebar-section { margin-bottom: 20px; }
+
+    .sidebar-section h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+      padding-bottom: 6px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 11px;
+      word-break: break-word;
+    }
+
+    .contact-item i {
+      width: 18px;
+      margin-right: 10px;
+      opacity: 0.8;
+      flex-shrink: 0;
+    }
+
+    .contact-item a { color: white; text-decoration: none; }
+
+    .skills-list { list-style: none; }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+
+    .skills-grid li {
+      background: rgba(255,255,255,0.1);
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-size: 10px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .languages-item, .cert-item { margin-bottom: 8px; font-size: 11px; }
+    .languages-item strong, .cert-item strong { display: block; font-weight: 600; margin-bottom: 2px; }
+
+    .cert-item {
+      background: rgba(255,255,255,0.05);
+      padding: 8px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    /* Main */
+    .main-content { padding: 30px 25px; flex: 1; min-width: 0; }
+    .summary { margin-bottom: 22px; }
+
+    .summary h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .summary h2 i { margin-right: 10px; }
+
+    .summary p {
+      font-size: 12px;
+      line-height: 1.4;
+      color: #4b5563;
+      text-align: justify;
+    }
+
+    .section { margin-bottom: 24px; }
+
+    .section h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    .section h2 i { margin-right: 10px; }
+
+    .experience-item, .education-item {
+      margin-bottom: 16px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .experience-item::before, .education-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background: #3b82f6;
+      border-radius: 50%;
+    }
+
+    .job-header { margin-bottom: 8px; }
+
+    .job-title {
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      color: #1f2937 !important;
+      line-height: 1.3 !important;
+    }
+
+    .job-dates { font-size: 11px; font-weight: 400; color: #6b7280; font-style: italic; }
+
+    .company {
+      font-size: 13px;
+      font-weight: 500;
+      color: #3b82f6;
+      margin-bottom: 3px;
+    }
+
+    .company .location { font-size: 11px; font-weight: 400; color: #6b7280; font-style: italic; }
+
+    .job-description ul { list-style: none; padding-left: 0; margin-top: 6px; }
+
+    .job-description li {
+      margin-bottom: 6px;
+      font-size: 12px;
+      line-height: 1.35;
+      color: #4b5563;
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .job-description li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: bold;
+    }
+
+    .education-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 2px;
+    }
+
+    .education-item h4 .institution { font-weight: 500; color: #3b82f6; }
+    .education-item .field { font-size: 11px; color: #6b7280; margin-bottom: 2px; }
+
+    /* Certifications in main content (white background) */
+    .cert-list { margin-top: 6px; }
+
+    .cert-card {
+      background: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .cert-card .cert-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1f2937;
+      line-height: 1.25;
+    }
+
+    .cert-card .cert-meta {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+
+    /* ATS mode */
+    body.ats { background: white; }
+    body.ats .cv-container { box-shadow: none; margin: 0; min-height: auto; max-width: 210mm; }
+    body.ats .sidebar { display: none; }
+    body.ats .main-content { padding: 0; }
+    body.ats i { display: none; }
+    body.ats .section h2 { border-bottom: 1px solid #ddd; color: #111; }
+    body.ats .summary h2 { color: #111; }
+    body.ats .summary p, body.ats .job-description li { color: #111; }
+    body.ats .experience-item::before, body.ats .education-item::before { display: none; }
+    body.ats .experience-item, body.ats .education-item { padding-left: 0; }
+
+    /* Print */
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { background: white; margin: 0; padding: 0; }
+
+      .cv-container {
+        box-shadow: none;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: none !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        min-height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        page-break-inside: avoid;
+      }
+
+      .sidebar {
+        width: 68mm !important;
+        min-width: 68mm !important;
+        max-width: 68mm !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        padding: 25px 18px !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .main-content {
+        flex: 1 !important;
+        width: calc(210mm - 68mm) !important;
+        padding: 25px 20px !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        min-width: 0 !important;
+      }
+
+      .experience-item, .education-item, .summary { page-break-inside: avoid; break-inside: avoid; }
+
+      @page { size: A4; margin: 0; }
+      html, body { width: 210mm !important; height: 297mm !important; overflow: hidden !important; }
+
+      body.ats .cv-container { height: auto !important; }
+      body.ats .main-content { width: 210mm !important; padding: 0 !important; }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .cv-container { flex-direction: column; margin: 10px; }
+      .sidebar { width: auto; padding: 30px 20px; min-width: 0; }
+      .main-content { padding: 30px 20px; }
+    }
+  </style>
+</head>
+
+<!-- Para ATS: <body class="ats"> -->
+<body>
+  <div class="cv-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="profile-section">
+        <img class="profile-image" src="foto-perfil.png" alt="Foto de Iván Reyes Laguna" />
+        <h1 class="name">Iván Reyes Laguna</h1>
+        <p class="title">Business Analyst | SQL (BigQuery) | Python | Tableau</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-address-book"></i> Contacto</h3>
+        <div class="contact-item"><i class="fas fa-phone"></i><span>+(34) 610 670 554</span></div>
+        <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:ivan.reyes.laguna22@gmail.com">ivan.reyes.laguna22@gmail.com</a></div>
+        <div class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/ivanreyeslaguna" target="_blank" rel="noopener">linkedin.com/in/ivanreyeslaguna</a></div>
+        <div class="contact-item"><i class="fab fa-github"></i><a href="https://github.com/IvanReyesLaguna/Business-Analytics" target="_blank" rel="noopener">github.com/IvanReyesLaguna/Business-Analytics</a></div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Madrid, España</span></div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-cogs"></i> Skills</h3>
+        <ul class="skills-list skills-grid">
+          <li>Excel<br>Google Sheets</li>
+          <li>SQL<br>(BigQuery)</li>
+          <li>Python</li>
+          <li>Tableau</li>
+          <li>Data<br>Modeling</li>
+          <li>ETL &amp; Data Pipelines</li>
+          <li>Attention to<br>detail</li>
+          <li>Requirements<br>Gathering</li>
+          <li>Data storytelling</li>
+          <li>AI Tools</li>
+          <li>Critical Thinking</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-language"></i> Idiomas</h3>
+        <div class="languages-item"><strong>Español</strong><span>Nativo</span></div>
+        <div class="languages-item"><strong>Inglés</strong><span>Profesional (B2)</span></div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-trophy"></i> Logros</h3>
+        <div class="cert-item">
+          <strong>Matrícula de Honor - TFM</strong>
+          <span>App Web Detección de Riesgo en Imágenes</span>
+        </div>
+        <div class="cert-item">
+          <strong>Datatón 2024 &amp; 2025 - Datafest</strong>
+          <span style="display:block;font-size:10px;color:rgba(255,255,255,0.8);margin-top:4px;">
+            Competencia por equipos de análisis y visualización de datos aplicada a casos reales.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <section class="summary">
+        <h2><i class="fas fa-user-circle"></i> Perfil Profesional</h2>
+        <p>
+          Business Analyst con 2+ años de experiencia en telecomunicaciones y finanzas,
+          especializado en convertir datos en insights accionables. Con sólido manejo de Python,
+          SQL y Tableau para automatización ETL y dashboards self-service. Combino capacidades
+          técnicas con visión de negocio para impulsar KPIs clave, mientras continúo ampliando mi
+          experiencia en forecasting financiero, machine learning aplicado y data storytelling para
+          stakeholders.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2><i class="fas fa-briefcase"></i> Experiencia Relevante</h2>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <div class="job-title">FP&amp;A Business Analyst — <span class="job-dates">Freepik | Oct 2025 – Dec 2025</span></div>
+              <div class="company">Málaga, España</div>
+            </div>
+          </div>
+          <div class="job-description">
+            <ul>
+              <li><strong>Reporting ejecutivo:</strong> Soporte al CFO en reporting semanal/mensual (P&amp;L, OPEX, márgenes, KPIs) y síntesis de insights para Board/Comité.</li>
+              <li><strong>SQL + calidad del dato:</strong> Extracción y preparación de datos con SQL (BigQuery), control de consistencia y consolidación para reporting.</li>
+              <li><strong>Storytelling:</strong> Presentación de resultados y drivers en Google Slides/PowerPoint para stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Data Finance Analyst — <span class="job-dates">Avatel Telecom | Jul 2023 – Nov 2025</span></div>
+              <div class="company">Madrid, España</div>
+            </div>
+          </div>
+
+          <div style="font-size:11px;color:#6b7280;margin-top:2px;margin-bottom:6px;font-style:italic; line-height:1.35;">
+            <strong>Progresión:</strong>
+            <ul style="margin:4px 0 0 14px; padding:0;">
+              <li>B2B Technical Analyst Trainee (Jul 2023 – Ene 2024)</li>
+              <li>Data Analyst (Ene 2024 – Sep 2025)</li>
+              <li>FP&amp;A Business Analyst (Oct 2025 – Nov 2025)</li>
+            </ul>
+          </div>
+
+          <div class="job-description">
+            <ul>
+              <li><strong>Automatización ETL &amp; reporting:</strong> Desarrollo de pipelines en Python e informes en Tableau que eliminaron flujos manuales, reduciendo errores operacionales y liberando 20+ horas semanales del equipo para análisis de mayor valor.</li>
+              <li><strong>Repositorio analítico departamental:</strong> Implementación de un data mart con visión end-to-end del ciclo de vida de facturas, habilitando KPIs y decisiones basadas en datos; contribución a mejora del 0,25 % en la tasa de impago.</li>
+              <li><strong>Conciliación automatizada:</strong> Automatización del proceso de conciliación y reporte de facturación con gestor de cartera externo, mejorando transparencia y evaluación de eficacia en procesos de recobro.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><i class="fas fa-briefcase"></i> Experiencia Adicional</h2>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Business Development — <span class="job-dates">Marbella Segway Tours &amp; Bikes | Oct 2021 – Sep 2022</span></div>
+              <div class="company">Marbella, España</div>
+            </div>
+          </div>
+          <div class="job-description">
+            <ul>
+              <li><strong>Pricing &amp; oferta:</strong> Optimización de tarifas y propuesta de valor; crecimiento de facturación del 20% YoY (turismo/luxury).</li>
+              <li><strong>Digital:</strong> Impulso del canal online (mejoras web y acciones SEM/SEO) para aumentar visibilidad y conversión.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
+
+        <div class="education-item">
+          <h4>Master Business Analytics — <span class="institution">Universidad Europea de Madrid</span></h4>
+          <div class="field">Especialización: Ciencia de datos y servicios IT | Sep 2022 – Jun 2023</div>
+        </div>
+
+        <div class="education-item">
+          <h4>Grado en Ciencias Económicas — <span class="institution">Universidad de Málaga</span></h4>
+          <div class="field">Especialización: Fiscalidad (Sistema Tributario) | 2013 – 2019</div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function printCV() { window.print(); }
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key.toLowerCase() === 'p') {
+        e.preventDefault();
+        printCV();
+      }
+    });
+  </script>
+</body>
+</html>
