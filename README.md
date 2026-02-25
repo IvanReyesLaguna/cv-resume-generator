@@ -12,21 +12,42 @@ A modern, responsive HTML/CSS resume template optimized for Business Analyst and
 
 ## Quick Start
 
-1. Choose your preferred language version:
-   - `index_spanish.html` - Spanish version
-   - `index_english.html` - English version
-2. Open the selected file in any modern web browser
-3. Use `Ctrl+P` (Windows) or `Cmd+P` (Mac) to print or save as PDF
-4. No server or dependencies required
+1. Abre `index.html` para ver el índice de todos los CV disponibles
+2. O navega directamente por la estructura: **rol / idioma / modelo**
+3. Abre el archivo HTML en cualquier navegador
+4. Usa `Ctrl+P` (Windows) o `Cmd+P` (Mac) para imprimir o guardar como PDF
 
-## File Structure
+## Estructura de archivos
+
+Los CV están organizados por **rol → idioma → modelo**:
 
 ```
 cv-resume-generator/
-├── index_spanish.html  # Spanish resume version
-├── index_english.html  # English resume version (US optimized)
-├── foto-perfil.png     # Profile image
-└── README.md          # Documentation
+├── index.html                    # Índice de todos los CV
+├── operario-almacen/
+│   └── spanish/
+│       └── regular.html
+├── business-analyst/
+│   ├── spanish/
+│   │   ├── regular.html
+│   │   ├── ats.html
+│   │   └── ats-extended.html
+│   └── english/
+│       ├── regular.html
+│       └── ats.html
+├── data-analyst/
+│   ├── spanish/
+│   │   ├── index.html
+│   │   ├── regular.html
+│   │   └── ats.html
+│   └── english/
+│       ├── regular.html
+│       └── ats.html
+├── daniela/
+│   └── spanish/
+│       └── regular.html
+├── foto-perfil.png               # Imagen de perfil (opcional)
+└── README.md
 ```
 
 ## Technical Stack
