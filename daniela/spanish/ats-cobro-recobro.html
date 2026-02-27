@@ -1,0 +1,365 @@
+<!-- =========================
+     CV — Analista de Datos Operacionales de Cobro y Recobro
+     Daniela Marchante Velázquez
+     Optimizado para ATS y puesto de cobro/recobro
+========================= -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniela Marchante - Analista de Datos Cobro y Recobro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --dark: #2d2d2d;
+      --medium: #444;
+      --muted: #555;
+      --light: #777;
+      --lighter: #999;
+      --rule: #ddd;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+      line-height: 1.5;
+      color: var(--ink);
+      background: #e8e8e8;
+      font-size: 10.5pt;
+    }
+
+    a { color: var(--ink); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .cv-container {
+      max-width: 210mm;
+      margin: 24px auto;
+      background: #fff;
+      padding: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      border-radius: 2px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 28px 18mm 16px;
+      background: #fafafa;
+      border-bottom: 2px solid var(--medium);
+    }
+
+    .header h1 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 26pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .header .title {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .contact-info {
+      font-size: 8.5pt;
+      color: var(--light);
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .contact-info a { color: var(--dark); }
+    .contact-info a:hover { text-decoration: underline; }
+    .contact-info .sep { margin: 0 5px; color: var(--lighter); font-weight: 300; }
+
+    .content { padding: 8mm 18mm 22mm; }
+
+    .section { margin-bottom: 20px; }
+
+    .section-title {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      color: var(--ink);
+      padding-left: 12px;
+      border-left: 4px solid var(--dark);
+      padding-bottom: 0;
+      padding-top: 2px;
+    }
+
+    .summary {
+      font-size: 10pt;
+      text-align: justify;
+      color: var(--dark);
+      line-height: 1.55;
+    }
+
+    .experience-item {
+      margin-bottom: 18px;
+      padding-left: 12px;
+      border-left: 2px solid var(--rule);
+    }
+
+    .education-item { margin-bottom: 14px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .job-dates {
+      font-size: 9pt;
+      font-style: italic;
+      color: var(--light);
+      white-space: nowrap;
+    }
+
+    .company-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .company-row .job-location::before { content: "· "; color: var(--lighter); }
+    .company-name {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .job-location { font-size: 9pt; color: var(--light); }
+
+    .job-description { font-size: 10pt; margin-top: 8px; color: var(--dark); }
+    .job-description ul { margin-left: 18px; padding-left: 0; list-style: disc; }
+    .job-description li { margin-bottom: 5px; line-height: 1.45; text-align: justify; }
+    .job-description li::marker { color: var(--medium); }
+
+    .skills-category {
+      margin-bottom: 10px;
+      line-height: 1.5;
+      padding: 6px 10px;
+      background: #f8f8f8;
+      border-radius: 2px;
+    }
+    .skills-category strong { font-size: 10pt; font-weight: 600; color: var(--dark); }
+    .skills-list { font-size: 10pt; color: var(--muted); }
+
+    .education-item h4 { font-family: "Libre Baskerville", Georgia, serif; font-size: 10.5pt; font-weight: 700; margin-bottom: 2px; color: var(--ink); }
+    .education-item .details { font-size: 10pt; color: var(--light); line-height: 1.4; }
+    .education-item .institution { font-weight: 700; color: var(--dark); }
+
+    .cert-item { margin-bottom: 6px; font-size: 10pt; line-height: 1.4; color: var(--dark); }
+    .cert-item strong { font-weight: 700; color: var(--ink); }
+    .cert-item .cert-institution { font-weight: 600; color: var(--dark); }
+    .language-item { font-size: 10pt; margin-bottom: 4px; }
+    .language-item strong { font-weight: 700; color: var(--dark); }
+
+    .page-break-before { break-before: page; page-break-before: always; }
+
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      html, body { margin: 0 !important; padding: 0 !important; background: #fff !important; overflow: visible !important; }
+      body { background: #fff !important; }
+      .experience-item, .education-item { break-inside: auto !important; page-break-inside: auto !important; }
+      .cv-container { max-width: none !important; width: 210mm !important; margin: 0 auto !important; padding: 0 !important; box-shadow: none !important; border-radius: 0 !important; }
+      .header { background: #fff !important; padding: 12px 12mm 10px !important; }
+      .skills-category { background: transparent !important; }
+      .content { padding: 8mm 12mm !important; }
+      .section { margin-bottom: 10px !important; }
+      @page { size: A4; margin: 8mm; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv-container">
+
+    <div class="header">
+      <h1>DANIELA MARCHANTE</h1>
+      <div class="title">Analista de Datos Operacional</div>
+      <div class="contact-info">
+        <span>+(34) 722 787 938</span><span class="sep">|</span>
+        <span><a href="mailto:damarvelaz@gmail.com">damarvelaz@gmail.com</a></span><span class="sep">|</span>
+        <span>Majadahonda, Madrid</span>
+      </div>
+    </div>
+
+    <div class="content">
+    <!-- Resumen profesional -->
+    <div class="section">
+      <div class="section-title">Resumen Profesional</div>
+      <div class="summary">
+        Analista de datos operacionales especializada en cobro, recobro y gestión de carteras de deuda, con más de 3 años de experiencia en telecomunicaciones. Experta en análisis de datos financieros, segmentación de carteras, comportamiento de clientes y definición de KPIs para optimizar procesos de cobro/recobro. Dominio de SQL, Excel avanzado y Tableau para reporting ejecutivo y dashboards operativos. Orientada a convertir datos en decisiones accionables y mejorar la eficiencia del ciclo de cobro.
+      </div>
+    </div>
+
+    <!-- Competencias técnicas -->
+    <div class="section">
+      <div class="section-title">Competencias Técnicas</div>
+
+      <div class="skills-category">
+        <strong>Análisis de datos operacionales:</strong>
+        <span class="skills-list">Segmentación de carteras, análisis de aging, comportamiento de clientes, KPIs de cobro/recobro, reporting operativo</span>
+      </div>
+
+      <div class="skills-category">
+        <strong>Herramientas de datos y visualización:</strong>
+        <span class="skills-list">Tableau, Power BI, SQL (SQL Server, Oracle), Excel avanzado (tablas dinámicas, fórmulas avanzadas, funciones de búsqueda, macros)</span>
+      </div>
+
+      <div class="skills-category">
+        <strong>Validación y calidad del dato:</strong>
+        <span class="skills-list">Levantamiento de requisitos, colaboración con áreas técnicas y de negocio, documentación, preparación, limpieza y validación de datos</span>
+      </div>
+
+      <div class="skills-category">
+        <strong>Procesos de cobro/recobro:</strong>
+        <span class="skills-list">Optimización de flujos de recobro, seguimiento de carteras, eficiencia operativa, coordinación de equipos de cobro</span>
+      </div>
+    </div>
+
+    <!-- Experiencia profesional -->
+    <div class="section">
+      <div class="section-title">Experiencia Profesional</div>
+
+      <div class="experience-item">
+        <div class="job-header">
+          <span class="job-title">Analista de Cobro / Recobro / Deuda</span>
+          <span class="job-dates">Jun 2023 – Actualidad</span>
+        </div>
+        <div class="company-row">
+          <span class="company-name">Avatel Telecom S.A.</span>
+          <span class="job-location">España</span>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>
+              <strong>Análisis y segmentación de carteras:</strong> Analizo datos financieros y operativos para segmentar carteras de deuda, identificar patrones de comportamiento, riesgos y oportunidades, optimizando los procesos de cobro y recobro.
+            </li>
+            <li>
+              <strong>Levantamiento de requisitos y alertas:</strong> Levanto requisitos con áreas técnicas y de negocio para definir y documentar necesidades funcionales del proceso de cobro. Configuro alarmas automáticas y reportes basados en reglas de negocio para detección temprana de incidencias y gestión proactiva.
+            </li>
+            <li>
+              <strong>KPIs y dashboards:</strong> Diseño e implemento KPIs (SLA por incidencia, tiempo medio de recobro, devoluciones, vencimientos) y desarrollo dashboards ejecutivos en Tableau para monitoreo y soporte a la toma de decisiones.
+            </li>
+            <li>
+              <strong>ETL y automatización de reporting:</strong> Extraigo, limpio y transformo datos con SQL y Excel avanzado, automatizando el reporting y reduciendo tiempos de cierre.
+            </li>
+            <li>
+              <strong>Proyecto deducción de IVA:</strong> Participo en la revisión y clasificación de carteras de deuda para la deducción fiscal de IVA de facturas vencidas e incobrables.
+            </li>
+            <li>
+              <strong>Migraciones CRM:</strong> Contribuyo a la validación de datos maestros de clientes y métodos de cobro en proyectos de migración de sistemas CRM.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-header">
+          <span class="job-title">Técnico Gestión de Cobros</span>
+          <span class="job-dates">Dic 2022 – May 2023</span>
+        </div>
+        <div class="company-row">
+          <span class="company-name">Avatel Telecom S.A.</span>
+          <span class="job-location">España</span>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>Coordiné y formé equipos operativos de cobro, asegurando el cumplimiento del proceso de recobro y estándares de calidad.</li>
+            <li>Analicé la efectividad del flujo de recobro y propuse mejoras basadas en datos operativos.</li>
+            <li>Monitoreé KPIs de eficiencia del equipo para seguimiento operativo y toma de decisiones.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item page-break-before">
+        <div class="job-header">
+          <span class="job-title">Técnico de Operaciones - Ventas</span>
+          <span class="job-dates">Ago 2022 – Nov 2022</span>
+        </div>
+        <div class="company-row">
+          <span class="company-name">Avatel Telecom S.A.</span>
+          <span class="job-location">España</span>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>Ejecuté y di seguimiento al proceso de soporte de ventas y gestión de incidencias operativas.</li>
+            <li>Coordiné la gestión de operadores, formación en procesos y monitoreo de KPIs de eficiencia.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formación académica -->
+    <div class="section">
+      <div class="section-title">Formación Académica</div>
+
+      <div class="education-item">
+        <h4>Máster en Administración y Dirección de Empresas (MBA)</h4>
+        <div class="details">
+          <span class="institution">EUDE Business School</span> | Madrid, España | Mar 2022 – Abr 2023
+        </div>
+      </div>
+
+      <div class="education-item">
+        <h4>Diplomado en Administración de Pequeños Negocios</h4>
+        <div class="details">
+          <span class="institution">Universidad La Salle</span> | México | Sep 2016 – Jun 2017
+        </div>
+      </div>
+
+      <div class="education-item">
+        <h4>Licenciada en Derecho</h4>
+        <div class="details">
+          <span class="institution">Universidad de La Habana</span> | Sep 2011 – Jul 2016
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificaciones -->
+    <div class="section">
+      <div class="section-title">Certificaciones</div>
+
+      <div class="cert-item"><strong>Certificado Microsoft Dashboards (Power BI &amp; Excel)</strong> — <span class="cert-institution">ThePower</span> | Jul 2024 – Sep 2024</div>
+      <div class="cert-item"><strong>Curso certificado SQL Server</strong> — <span class="cert-institution">IBM SkillsBuild &amp; Udemy Alumni</span> | Mar 2024 – May 2024</div>
+      <div class="cert-item"><strong>Tableau Public (Certificado Especialista)</strong> — <span class="cert-institution">Udemy</span> | Ago 2023 – Oct 2023</div>
+      <div class="cert-item"><strong>Análisis de Datos (Big Data)</strong> — <span class="cert-institution">Escuela de Empresa</span> | Ago 2022 – Ago 2023</div>
+      <div class="cert-item"><strong>Análisis de Estados Financieros y Económicos de la Empresa</strong> — <span class="cert-institution">Escuela de Empresa</span> | Ago 2022 – Ago 2023</div>
+    </div>
+
+    <!-- Idiomas -->
+    <div class="section">
+      <div class="section-title">Idiomas</div>
+      <div class="language-item"><strong>Español:</strong> Nativo</div>
+      <div class="language-item"><strong>Inglés:</strong> Nivel medio</div>
+    </div>
+
+    </div>
+  </div>
+</body>
+</html>
